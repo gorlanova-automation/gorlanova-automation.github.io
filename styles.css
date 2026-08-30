@@ -36,7 +36,7 @@ nav a { text-decoration: none; font-size: 14px; font-weight: 700; }
 .hero-shade { position: absolute; inset: 0; background: rgba(255,255,255,.34); }
 .hero-content { position: relative; z-index: 1; width: min(var(--max), calc(100% - 48px)); margin: 0 auto; padding: 82px 0; }
 .hero-content::before { content: ""; position: absolute; z-index: -1; inset: 34px auto 34px -36px; width: min(670px, 64vw); background: rgba(255,255,255,.88); border-left: 5px solid var(--teal); box-shadow: var(--shadow); }
-.hero-portrait { position: absolute; z-index: 2; right: max(32px, calc((100vw - var(--max)) / 2)); bottom: 0; width: clamp(280px, 29vw, 390px); height: min(72vh, 520px); object-fit: cover; object-position: center 30%; border: 1px solid rgba(255,255,255,.85); border-bottom: 0; border-radius: 8px 8px 0 0; box-shadow: 0 20px 54px rgba(20,43,52,.24); }
+.hero-avatar { width: 108px; height: 108px; margin-bottom: 18px; object-fit: cover; object-position: center 30%; border: 4px solid white; border-radius: 50%; box-shadow: 0 10px 28px rgba(20,43,52,.2); }
 .eyebrow { margin: 0 0 16px; color: var(--teal-dark); text-transform: uppercase; font-weight: 800; font-size: 13px; letter-spacing: 0; }
 h1, h2, h3 { margin-top: 0; letter-spacing: 0; }
 h1 { max-width: 680px; margin-bottom: 18px; font-size: clamp(48px, 7vw, 82px); line-height: 1; }
@@ -99,12 +99,6 @@ dd { margin: 0; color: var(--muted); }
 
 .about { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; padding-left: 0; padding-right: 0; display: grid; grid-template-columns: 1.15fr .85fr; gap: 74px; align-items: start; }
 .about-text { color: var(--muted); font-size: 19px; }
-.about-facts { margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); }
-.about-facts div { padding: 17px 16px 17px 0; display: grid; gap: 2px; border-bottom: 1px solid var(--line); }
-.about-facts div:nth-child(odd) { border-right: 1px solid var(--line); }
-.about-facts div:nth-child(even) { padding-left: 20px; }
-.about-facts strong { color: var(--teal-dark); font-size: 25px; line-height: 1.1; }
-.about-facts span { color: var(--muted); font-size: 13px; }
 .principles { border-top: 1px solid var(--line); }
 .principles div { padding: 22px 0; display: grid; grid-template-columns: 34px 1fr; gap: 3px 14px; border-bottom: 1px solid var(--line); }
 .principles svg { grid-row: 1 / 3; width: 26px; color: var(--teal); }
@@ -138,8 +132,6 @@ footer { min-height: 76px; padding: 20px max(24px, calc((100vw - var(--max)) / 2
   .hero { min-height: 80svh; }
   .hero-content::before { width: min(690px, calc(100% + 32px)); }
   .hero-image { object-position: 63% center; }
-  .hero-portrait { right: 24px; width: 235px; height: 360px; }
-  .hero-lead { max-width: 480px; }
   .proof-band { grid-template-columns: 1fr; gap: 18px; }
   .service-grid { grid-template-columns: 1fr 1fr; }
   .service-grid article:nth-child(2) { border-right: 0; }
@@ -157,9 +149,9 @@ footer { min-height: 76px; padding: 20px max(24px, calc((100vw - var(--max)) / 2
   .hero { min-height: 78svh; align-items: end; }
   .hero-image { object-position: 70% center; }
   .hero-shade { background: rgba(255,255,255,.50); }
-  .hero-content { width: calc(100% - 36px); padding: 236px 0 44px; }
+  .hero-content { width: calc(100% - 36px); padding: 46px 0 44px; }
   .hero-content::before { inset: 20px -18px 20px -18px; width: auto; border-left-width: 4px; }
-  .hero-portrait { top: 22px; right: 18px; bottom: auto; width: 160px; height: 200px; border-bottom: 1px solid rgba(255,255,255,.85); border-radius: 8px; }
+  .hero-avatar { width: 92px; height: 92px; margin-bottom: 14px; border-width: 3px; }
   h1 { font-size: 48px; }
   .hero-lead { font-size: 18px; }
   .hero-actions { display: grid; }
@@ -172,9 +164,6 @@ footer { min-height: 76px; padding: 20px max(24px, calc((100vw - var(--max)) / 2
   dl div { grid-template-columns: 1fr; gap: 3px; }
   .more-grid img { aspect-ratio: 3 / 2; }
   .about { width: calc(100% - 36px); }
-  .about-facts { grid-template-columns: 1fr; }
-  .about-facts div:nth-child(odd) { border-right: 0; }
-  .about-facts div:nth-child(even) { padding-left: 0; }
   .contact { padding: 66px 18px; }
   footer { padding: 22px 18px; align-items: flex-start; flex-direction: column; gap: 4px; }
   .lightbox { width: calc(100vw - 16px); padding: 48px 8px 26px; }
